@@ -1,21 +1,27 @@
-const add = (a, b) => a + b;
-console.log(add(3,5));
+let arrNumbers = [1, 2, 3, 4, 5, 6,7 ];
 
-const randomNumber = () => Math.floor(Math.random() * 101);
-console.log(randomNumber());
-
-class Person
+/* function printNumbers(arrNumbers)
 {
-    constructor(name)
+    for(let i = 0; i < arrNumbers.length; i++)
     {
-        this.name = name;
+        function print (arrNumbers)
+        {
+            console.log(arrNumbers[i]);
+        }
+        print(arrNumbers);
+    } 
+} */
+
+const printNumbers = (arrNumbers) =>
+{
+    for(let i = 0; i < arrNumbers.length; i++)
+    { 
+        const print = (arrNumbers) => console.log(arrNumbers[i]);
+        print(arrNumbers);
     }
+};
 
-    greet = () => console.log(`Hola ${this.name}`);
-
-}
-const person = new Person('Paula');
-person.greet();
+printNumbers(arrNumbers);
 
 document.addEventListener("DOMContentLoaded", function() {
     const verSolucion = document.getElementById("soluciones");

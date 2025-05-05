@@ -16,7 +16,7 @@
         .caja {
             font-family: 'Courier New', Courier, monospace;
             background-color: #f4f4f4;
-            max-width: 600px;
+            max-width: 700px;
             padding: 10px;
             border-radius: 5px;
         }
@@ -29,34 +29,34 @@
     <h3>Exercici 1: Conversió de funcions</h3>
     <p> Conversió de funcions: Tens una funció add que accepta dos paràmetres i retorna la seva suma.<br>
         Converteix-la en una funció de fletxa. Per exemple: function add(a, b) {return a + b;}.</p>
-    <div class="caja" id="solucion1" style="display: none;">
-        const add = (a, b) => a + b;<br>
-        console.log(add(3,5));
-    </div>
+    <pre class="caja" id="solucion1" style="display: none;">
+const add = (a, b) => a + b;
+console.log(add(3,5));
+    </pre>
 
     <h3>Exercici 2: Funció de fletxa sense paràmetres</h3>
     <p> Funció de fletxa sense paràmetres: Crea una funció de fletxa anomenada randomNumber que no<br>
         necessiti paràmetres i que retorni un número aleatori entre 0 i 100.</p>
-    <div class="caja" id="solucion2" style="display: none;">
-        const randomNumber = () => Math.floor(Math.random() * 101);<br>
-        console.log(randomNumber());
-    </div>
+    <pre class="caja" id="solucion2" style="display: none;">
+const randomNumber = () => Math.floor(Math.random() * 101);
+console.log(randomNumber());
+    </pre>
 
     <h3>Exercici 3: Ús de 'this' en les funcions de fletxa</h3>
     <p> Ús de 'this' en les funcions de fletxa: Crea una classe person que tingui una propietat name<br>
         i una funció greet que utilitzi una funció de fletxa.<br>
         La funció ha d'imprimir una salutació que inclogui el nom de la persona.<br>
         Per exemple: console.log(Hola, ${this.name});.</p>
-    <div class="caja" id="solucion3" style="display: none;">
-        class Person { <br>
-            constructor(name) {<br>
-                this.name = name;<br>
-            }<br>
-            greet = () => console.log(`Hola ${this.name}`);<br>
-        }<br>
-        const person = new Person('Paula');<br>
-        person.greet();<br>
-    </div>
+    <pre class="caja" id="solucion3" style="display: none;">
+class Person {
+    constructor(name) {
+        this.name = name;
+    }
+    greet = () => console.log(`Hola ${this.name}`);
+}
+const person = new Person('Paula');
+person.greet();
+    </pre>
 
     <script src="lvl1.js"></script>
 </body>
