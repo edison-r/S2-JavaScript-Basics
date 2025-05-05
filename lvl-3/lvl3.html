@@ -26,23 +26,19 @@
     <h1>Arrow Functions Exercises</h1>
     <p>Abre la consola del navegador para probar los siguientes ejercicios:</p>
     <button id="soluciones">Ver/Ocultar soluciones</button>
-    <h3>Exercici 4: Funció de fletxa dins d'un loop</h3>
-    <p> Crea una funció anomenada printNumbers que accepti un array de números i utilitzi un loop<br>
-        for per imprimir cada número a la consola utilitzant una funció de fletxa.
+    <h3>Exercici 5: Funció de fletxa amb 'setTimeout'</h3>
+    <p>Crea una funció de fletxa que imprimeixi un missatge a la consola després d'esperar 3 segons.</p>
     <pre class="caja" id="solucion1" style="display: none;">
-let arrNumbers = [1, 2, 3, 4, 5, 6, 7];
+const printMessage = () => {
+    setTimeout(() => {
+        console.log("Mensaje retrasado a los 3 segundos");
+    }, 3000);
+}
 
-const printNumbers = (arrNumbers) => 
-{
-    for(let i = 0; i < arrNumbers.length; i++)
-    {
-        const print = (arrNumbers) => console.log(arrNumbers[i]);
-        print(arrNumbers);
-    }
-};
+printMessage();
     </pre>
 
     <script src="domcontrol.js"></script>
-    <script src="lvl2.js"></script>
+    <script src="lvl3.js"></script>
 </body>
 </html>
