@@ -6,10 +6,10 @@ Este proyecto contiene ejercicios de JavaScript de diferentes niveles.
 
 El proyecto consta de siete partes, cada una utilizando practicando diferentes conceptos de JS.
 
-1. **Arrow functions** _🚧 en proceso_
+1. **Arrow functions** 
 2. **Ternary operators**
 3. **Callbacks**
-4. **Rest & Spread operators**
+4. **Rest & Spread operators** _🚧 en proceso_
 5. **Array transformations**
 6. **Array loops**
 7. **Promises & Async/Await**
