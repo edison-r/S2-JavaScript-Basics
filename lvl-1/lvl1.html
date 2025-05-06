@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary Operator Exercises (1)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 1200px;
+        }
+        h1, h3 {
+            color: #333;
+        }
+        .caja {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            max-width: 700px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ternary Operator Exercises (1)</h1>
+    <p>Abre la consola del navegador para probar los siguientes ejercicios:</p>
+    <button id="soluciones">Ver/Ocultar soluciones</button>
+    <h3>Exercici 1: Operador ternari bàsic</h3>
+    <p> Escriu una funció potConduir que accepti l'edat com a paràmetre i utilitzi l'operador ternari<br>
+        per determinar si l'usuari pot conduir. Si l'edat és 18 o més, ha de retornar 'Pots conduir'.<br>
+        Si no, ha de retornar 'No pots conduir'.
+<pre class="caja" id="solucion1" style="display: none;">
+function potConduir(edat) {
+    return edat >= 18 ? "Pots conduir" : "No pots conduir";
+}
+
+console.log(potConduir(18));
+</pre>
+
+    <h3>Exercici 2: Ús amb operadors de comparació</h3>
+    <p>Escriu una expressió que utilitzi l'operador ternari per determinar quin dels dos nombres donats<br>
+        (num1 i num2) és més gran. Si num1 és més gran, retorna 'num1 és més gran'. <br>
+        Si no, retorna 'num2 és més gran'.
+    <pre class="caja" id="solucion2" style="display: none;">
+function numGran(num1, num2) {
+    return num1 > num2 ? "num1 és més gran" : "num2 és més gran";
+}
+
+console.log(numGran(1, 3));
+</pre>
+
+    <script src="domcontrol.js"></script>
+    <script src="lvl1.js"></script>
+</body>
+</html>
