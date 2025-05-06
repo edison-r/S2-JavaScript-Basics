@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks (1)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 1200px;
+        }
+        h1, h3 {
+            color: #333;
+        }
+        .caja {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            max-width: 700px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Callbacks (2)</h1>
+    <p>Abre la consola del navegador para probar los siguientes ejercicios:</p>
+    <button id="soluciones">Ver/Ocultar soluciones</button>
+    <h3>Exercici 1: Callback bàsic</h3>
+    <p> Escriu una funció anomenada processar que accepti dos paràmetres: un nombre i una funció de callback.<br>
+        La funció processar ha d'invocar la funció de callback, passant el nombre com a paràmetre.
+<pre class="caja" id="solucion1" style="display: none;">
+function processar(num, callback) {
+    callback(num);
+}
+
+function callback(num) {
+    console.log(`${num}`);
+}
+
+processar(6, callback);
+</pre>
+
+    <h3>Exercici 2: Callbacks amb operacions matemàtiques</h3>
+    <p> Escriu una funció calculadora que accepti tres paràmetres: dos nombres i una funció de callback.<br>
+        La funció calculadora ha d'invocar la funció de callback amb els dos nombres com a paràmetres.<br>
+        Després, crida calculadora amb una funció que faci la suma dels dos nombres
+    <pre class="caja" id="solucion2" style="display: none;">
+a
+</pre>
+
+    <script src="domcontrol.js"></script>
+    <script src="lvl1.js"></script>
+</body>
+</html>
