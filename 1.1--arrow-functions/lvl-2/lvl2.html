@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions Exercises</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 1200px;
+        }
+        h1, h3 {
+            color: #333;
+        }
+        .caja {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            max-width: 700px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arrow Functions Exercises</h1>
+    <p>Abre la consola del navegador para probar los siguientes ejercicios:</p>
+    <button id="soluciones">Ver/Ocultar soluciones</button>
+    <h3>Exercici 4: Funció de fletxa dins d'un loop</h3>
+    <p> Crea una funció anomenada printNumbers que accepti un array de números i utilitzi un loop<br>
+        for per imprimir cada número a la consola utilitzant una funció de fletxa.
+    <pre class="caja" id="solucion1" style="display: none;">
+let arrNumbers = [1, 2, 3, 4, 5, 6, 7];
+
+const printNumbers = (arrNumbers) => 
+{
+    for(let i = 0; i < arrNumbers.length; i++)
+    {
+        const print = (arrNumbers) => console.log(arrNumbers[i]);
+        print(arrNumbers);
+    }
+};
+    </pre>
+
+    <script src="domcontrol.js"></script>
+    <script src="lvl2.js"></script>
+</body>
+</html>
