@@ -1,11 +1,30 @@
-function processar(num, callback)
+// Exercici 3
+const esperarISaludar = (nom, saluteCallback) => 
 {
-    callback(num);
+    setTimeout(() => {
+        saluteCallback(nom);
+    }, 2000); 
 }
 
-function callback(num)
-{
-    console.log(`${num}`);
+const saluteCallback = (nom) => console.log(`¡Hola, ${nom}!`);
+esperarISaludar("Juan José", saluteCallback);
+
+// separador de respuestas en la consola
+setTimeout(() => {
+    console.log("----------"); 
+}, 3000);
+
+// Exercici 4
+const processarElements = (arr, arrayCallback) => {
+    setTimeout(() => { // setTimeout agregado para que las respuestas se muestren en orden en consola
+        arrayCallback(arr);
+    }, 4000); 
 }
 
-processar(6, callback);
+const arrayCallback = (arr) =>
+{
+    arr.forEach((element) => console.log(element));
+}
+
+const arr = [1, "callback", true, 2, "Hola", false];
+processarElements(arr, arrayCallback);

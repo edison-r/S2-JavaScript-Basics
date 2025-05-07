@@ -1,8 +1,10 @@
+// Exercici 1
 function processar(num, callback)
 {
     callback(num);
 }
 
+// Exercici 2
 function calculadora(num1, num2, callbackCalc) {
     callbackCalc(num1, num2);
 }

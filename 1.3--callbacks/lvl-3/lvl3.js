@@ -1,11 +1,11 @@
-function processar(num, callback)
-{
-    callback(num);
+// Exercici 5
+const processarCadena = (str, callbackUpper) => callbackUpper(str);
+
+const callbackUpper = (str) => {
+    return str.toUpperCase();
 }
 
-function callback(num)
-{
-    console.log(`${num}`);
-}
+let str = "eSte sTrinG seRá eN maYúsCulas"
+const strMayus = processarCadena(str, callbackUpper);
 
-processar(6, callback);
+console.log(strMayus);

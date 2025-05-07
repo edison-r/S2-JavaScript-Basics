@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Callbacks (1)</title>
+    <title>Callbacks (2)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -26,30 +26,37 @@
     <h1>Callbacks (2)</h1>
     <p>Abre la consola del navegador para probar los siguientes ejercicios:</p>
     <button id="soluciones">Ver/Ocultar soluciones</button>
-    <h3>Exercici 1: Callback bàsic</h3>
-    <p> Escriu una funció anomenada processar que accepti dos paràmetres: un nombre i una funció de callback.<br>
-        La funció processar ha d'invocar la funció de callback, passant el nombre com a paràmetre.
+    <h3>Exercici 3: Ús de callbacks en funcions asíncrones</h3>
+    <p> Escriu una funció esperarISaludar que accepti dos paràmetres: un nom i una funció de callback.<br>
+        La funció ha d'esperar 2 segons i llavors invocar la funció de callback, passant el nom com a paràmetre.
 <pre class="caja" id="solucion1" style="display: none;">
-function processar(num, callback) {
-    callback(num);
+const esperarISaludar = (nom, saluteCallback) => {
+    setTimeout(() => {
+        saluteCallback(nom);
+    }, 2000); 
 }
 
-function callback(num) {
-    console.log(`${num}`);
-}
-
-processar(6, callback);
+const saluteCallback = (nom) => console.log(`¡Hola, ${nom}!`);
+esperarISaludar("Juan José", saluteCallback);
 </pre>
 
-    <h3>Exercici 2: Callbacks amb operacions matemàtiques</h3>
-    <p> Escriu una funció calculadora que accepti tres paràmetres: dos nombres i una funció de callback.<br>
-        La funció calculadora ha d'invocar la funció de callback amb els dos nombres com a paràmetres.<br>
-        Després, crida calculadora amb una funció que faci la suma dels dos nombres
-    <pre class="caja" id="solucion2" style="display: none;">
-a
+    <h3>Exercici 4: Callbacks amb arrays</h3>
+    <p> Escriu una funció processarElements que accepti dos paràmetres: un array i una funció de callback.<br>
+        La funció processarElements ha d'invocar la funció de callback per cada element de l'array.
+<pre class="caja" id="solucion2" style="display: none;">
+const processarElements = (arr, arrayCallback) => {
+        arrayCallback(arr);
+}
+
+const arrayCallback = (arr) => {
+    arr.forEach((element) => console.log(element));
+}
+
+const arr = [1, "callback", true, 2, "Hola", false];
+processarElements(arr, arrayCallback);
 </pre>
 
     <script src="domcontrol.js"></script>
-    <script src="lvl1.js"></script>
+    <script src="lvl2.js"></script>
 </body>
 </html>

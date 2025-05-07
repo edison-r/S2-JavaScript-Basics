@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Callbacks (1)</title>
+    <title>Callbacks (3)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,33 +23,25 @@
     </style>
 </head>
 <body>
-    <h1>Callbacks (1)</h1>
+    <h1>Callbacks (3)</h1>
     <p>Abre la consola del navegador para probar los siguientes ejercicios:</p>
     <button id="soluciones">Ver/Ocultar soluciones</button>
-    <h3>Exercici 1: Callback bàsic</h3>
-    <p> Escriu una funció anomenada processar que accepti dos paràmetres: un nombre i una funció de callback.<br>
-        La funció processar ha d'invocar la funció de callback, passant el nombre com a paràmetre.
+    <h3>Exercici 5: Escriu una funció processarCadena que accepti dos paràmetres</h3>
+    <p> una cadena de caràcters i una funció de callback. La funció processarCadena ha de convertir la cadena a majúscules<br>
+        i llavors invocar la funció de callback amb la cadena transformada.
 <pre class="caja" id="solucion1" style="display: none;">
-function processar(num, callback) {
-    callback(num);
+const processarCadena = (str, callbackUpper) => callbackUpper(str);
+
+const callbackUpper = (str) => {
+    return str.toUpperCase();
 }
 
-function callback(num) {
-    console.log(`${num}`);
-}
+let str = "eSte sTrinG seRá eN maYúsCulas"
+const strMayus = processarCadena(str, callbackUpper);
 
-processar(6, callback);
+console.log(strMayus);
 </pre>
-
-    <h3>Exercici 2: Callbacks amb operacions matemàtiques</h3>
-    <p> Escriu una funció calculadora que accepti tres paràmetres: dos nombres i una funció de callback.<br>
-        La funció calculadora ha d'invocar la funció de callback amb els dos nombres com a paràmetres.<br>
-        Després, crida calculadora amb una funció que faci la suma dels dos nombres
-    <pre class="caja" id="solucion2" style="display: none;">
-a
-</pre>
-
     <script src="domcontrol.js"></script>
-    <script src="lvl1.js"></script>
+    <script src="lvl3.js"></script>
 </body>
 </html>
