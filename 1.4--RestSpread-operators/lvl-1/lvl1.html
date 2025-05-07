@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest & Spread operators (1)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 1200px;
+        }
+        h1, h3 {
+            color: #333;
+        }
+        .caja {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            max-width: 700px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rest & Spread operators Exercises (1)</h1>
+    <p>Abre la consola del navegador para probar los siguientes ejercicios:</p>
+    <button id="soluciones">Ver/Ocultar soluciones</button>
+
+    <h3>Exercici 1: Operador Spread en Arrays</h3>
+    <p> Crea dues arrays, array1 i array2. Utilitza l'operador spread per a crear una tercera array<br>
+        que contingui tots els elements de array1 i array2.
+<pre class="caja" id="solucion1" style="display: none;">
+const array1 = ["Sandía", "Manzana", "Banana"];
+const array2 = ["Lechuga", "Pimiento", "Cebolla"];
+
+const arrayCombined = [...array1, ...array2];
+console.log(arrayCombined);
+</pre>
+
+    <h3>Exercici 2: Operador Rest en Funcions</h3>
+    <p> Crea una funció 'suma' que utilitzi l'operador rest per a acceptar un nombre indeterminat d'arguments<br>
+        i retornar la seva suma.
+<pre class="caja" id="solucion2" style="display: none;">
+const sum = (...numbers) => {
+    let result = 0;
+    numbers.forEach(num => result += num);
+    return result;
+} 
+
+result = sum(1, 2, 3, 4, 1,5);
+console.log(result);
+</pre>
+
+    <script src="domcontrol.js"></script>
+    <script src="lvl1.js"></script>
+</body>
+</html>
