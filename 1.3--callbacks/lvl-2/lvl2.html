@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks (2)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 1200px;
+        }
+        h1, h3 {
+            color: #333;
+        }
+        .caja {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            max-width: 700px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Callbacks (2)</h1>
+    <p>Abre la consola del navegador para probar los siguientes ejercicios:</p>
+    <button id="soluciones">Ver/Ocultar soluciones</button>
+    <h3>Exercici 3: Ús de callbacks en funcions asíncrones</h3>
+    <p> Escriu una funció esperarISaludar que accepti dos paràmetres: un nom i una funció de callback.<br>
+        La funció ha d'esperar 2 segons i llavors invocar la funció de callback, passant el nom com a paràmetre.
+<pre class="caja" id="solucion1" style="display: none;">
+const esperarISaludar = (nom, saluteCallback) => {
+    setTimeout(() => {
+        saluteCallback(nom);
+    }, 2000); 
+}
+
+const saluteCallback = (nom) => console.log(`¡Hola, ${nom}!`);
+esperarISaludar("Juan José", saluteCallback);
+</pre>
+
+    <h3>Exercici 4: Callbacks amb arrays</h3>
+    <p> Escriu una funció processarElements que accepti dos paràmetres: un array i una funció de callback.<br>
+        La funció processarElements ha d'invocar la funció de callback per cada element de l'array.
+<pre class="caja" id="solucion2" style="display: none;">
+const processarElements = (arr, arrayCallback) => {
+        arrayCallback(arr);
+}
+
+const arrayCallback = (arr) => {
+    arr.forEach((element) => console.log(element));
+}
+
+const arr = [1, "callback", true, 2, "Hola", false];
+processarElements(arr, arrayCallback);
+</pre>
+
+    <script src="domcontrol.js"></script>
+    <script src="lvl2.js"></script>
+</body>
+</html>
