@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array transformations (1)</title>
+    <title>Promises & Async/Await (1)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,40 +23,39 @@
     </style>
 </head>
 <body>
-    <h1>Array transformations (1)</h1>
+    <h1>Promises & Async/Await (1)</h1>
     <p>Abre la consola del navegador para probar los siguientes ejercicios:</p>
     <button id="soluciones">Ver/Ocultar soluciones</button>
 
-    <h3>Exercici 1: Map</h3>
-    <p> Teniu un array de números [1, 2, 3, 4].<br>
-        Crea una nova array que contingui el quadrat de cada número.<br>
+    <h3>Exercici 1: Creació d'una Promesa</h3>
+    <p> Crea una promesa que es resolgui després de 2 segons i que retorni la cadena de text 'Hola, món'. </p>
+
 <pre class="caja" id="solucion1" style="display: none;">
-const arrMap = [1, 2, 3, 4];
-console.log(arrMap.map((x) => x * 2));
+a
 </pre>
 
-    <h3>Exercici 2: Filter</h3>
-    <p> Teniu una array de números [1, 2, 3, 4].<br>
-        Crea una nova array que només contingui els números parells.<br>
+    <h3>Exercici 2: Utilització d'una Promesa</h3>
+    <p> Utilitza la promesa creada en l'exercici anterior. Crea un .then que imprimeixi el resultat a la consola.</p>
+
 <pre class="caja" id="solucion2" style="display: none;">
-const arrFilt = [1, 2, 3, 4];
-console.log(arrFilt.filter((x) => x % 2 === 0));
+a
 </pre>
 
-    <h3>Exercici 3: Find</h3>
-    <p> Teniu una array de números [1, 10 , 8, 11].<br>
-        Utilitza la funció find per a trobar el primer número que és major a 10.<br>
+    <h3>Exercici 3: Promesa amb reject</h3>
+    <p> Crea una promesa que es resolgui després de 2 segons si l'input és igual a 'Hola',<br>
+        i que la rebutgi si l'input és qualsevol altra cosa.</p>
+
 <pre class="caja" id="solucion2" style="display: none;">
-const arrFind = [1, 10, 8 ,11];
-console.log(arrFind.find((x) => x > 10));
+a
 </pre>
 
-    <h3>Exercici 4: Reduce</h3>
-    <p> Teniu una array de números [13, 7, 8, 21].<br>
-        Fes servir la funció reduce per a calcular la suma total dels números.<br>
+    <h3>Exercici 4: Ús de async/await</h3>
+    <p> Escriu una funció asíncrona que utilitzi la funció await per a esperar el resultat<br>
+        de la promesa creada a l'exercici 1, i que després imprimeixi aquest resultat a la consola.</p>
+
+
 <pre class="caja" id="solucion2" style="display: none;">
-const arrRedu = [13, 7, 8, 21];
-console.log(arrRedu.reduce((acc, curr) => acc + curr));
+a
 </pre>
 
     <script src="domcontrol.js"></script>

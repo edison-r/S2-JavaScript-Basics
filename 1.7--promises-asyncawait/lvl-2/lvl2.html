@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array loops (2)</title>
+    <title>Promises & Async/Await (2)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,33 +23,15 @@
     </style>
 </head>
 <body>
-    <h1>Array loops (2)</h1>
+    <h1>Promises & Async/Await (2)</h1>
     <p>Abre la consola del navegador para probar los siguientes ejercicios:</p>
     <button id="soluciones">Ver/Ocultar soluciones</button>
 
-    <h3>Exercici 4: for-in</h3>
-    <p> Teniu un objecte amb parells clau-valor: <i>let obj = { nom: Ona, edat: 25, ciutat: 'Barcelona' };</i><br>
-        Utilitza un bucle for-in per a imprimir a la consola cada clau i el seu valor corresponent.
+    <h3>Exercici 5: Gestió d'errors amb async/await</h3>
+    <p> Modifica la funció de l'exercici 4 per a que capturi qualsevol possible error utilitzant un bloc try/catch. </p>
+
 <pre class="caja" id="solucion1" style="display: none;">
-let obj = { nom: "Ona", edat: 25, ciutat: "Barcelona" };
-
-for(const property in obj) {
-    console.log(`${property}: ${obj[property]}`);
-}
-</pre>
-
-<h3>Exercici 5: for-of amb break</h3>
-<p> Teniu un array <i>let numeros = [1, 2, 3, 4, 5, 6];</i><br>
-    Utilitza un bucle for-of per a imprimir a la consola els números fins a trobar el número 5, llavors atura el bucle.
-<pre class="caja" id="solucion1" style="display: none;">
-let numeros = [1, 2, 3, 4, 5, 6];
-
-for(const num of numeros) {
-    console.log(`${num}`)
-    if(num === 5) {
-        break;
-    }
-}
+a
 </pre>
 
     <script src="domcontrol.js"></script>
