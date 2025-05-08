@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arrow Functions Exercises</title>
+    <title>Array loops (3)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,26 +23,22 @@
     </style>
 </head>
 <body>
-    <h1>Arrow Functions Exercises</h1>
+    <h1>Array loops (3)</h1>
     <p>Abre la consola del navegador para probar los siguientes ejercicios:</p>
     <button id="soluciones">Ver/Ocultar soluciones</button>
-    <h3>Exercici 4: Funció de fletxa dins d'un loop</h3>
-    <p> Crea una funció anomenada printNumbers que accepti un array de números i utilitzi un loop<br>
-        for per imprimir cada número a la consola utilitzant una funció de fletxa.
-    <pre class="caja" id="solucion1" style="display: none;">
-let arrNumbers = [1, 2, 3, 4, 5, 6, 7];
 
-const printNumbers = (arrNumbers) => 
-{
-    for(let i = 0; i < arrNumbers.length; i++)
-    {
-        const print = (arrNumbers) => console.log(arrNumbers[i]);
-        print(arrNumbers);
-    }
-};
-    </pre>
+    <h3>Exercici 6: for-of amb index</h3>
+    <p> Utilitza un bucle for-of per a imprimir a la consola cada element de l'array i la seva posició (index):<br>
+        <i>let noms = ['Anna', 'Bernat', 'Clara']</i>
+<pre class="caja" id="solucion1" style="display: none;">
+let noms = ['Anna', 'Bernat', 'Clara']
+
+for(const [index, nom] of noms.entries()) {
+    console.log(`Posició: ${index}, Nom: ${nom};`)
+}
+</pre>
 
     <script src="domcontrol.js"></script>
-    <script src="lvl2.js"></script>
+    <script src="lvl3.js"></script>
 </body>
 </html>
