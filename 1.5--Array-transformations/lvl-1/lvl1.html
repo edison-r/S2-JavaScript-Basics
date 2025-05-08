@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rest & Spread operators (1)</title>
+    <title>Array transformations (1)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,33 +23,40 @@
     </style>
 </head>
 <body>
-    <h1>Rest & Spread operators Exercises (1)</h1>
+    <h1>Array transformations (1)</h1>
     <p>Abre la consola del navegador para probar los siguientes ejercicios:</p>
     <button id="soluciones">Ver/Ocultar soluciones</button>
 
-    <h3>Exercici 1: Operador Spread en Arrays</h3>
-    <p> Crea dues arrays, array1 i array2. Utilitza l'operador spread per a crear una tercera array<br>
-        que contingui tots els elements de array1 i array2.
+    <h3>Exercici 1: Map</h3>
+    <p> Teniu un array de números [1, 2, 3, 4].<br>
+        Crea una nova array que contingui el quadrat de cada número.<br>
 <pre class="caja" id="solucion1" style="display: none;">
-const array1 = ["Sandía", "Manzana", "Banana"];
-const array2 = ["Lechuga", "Pimiento", "Cebolla"];
-
-const arrayCombined = [...array1, ...array2];
-console.log(arrayCombined);
+const arrMap = [1, 2, 3, 4];
+console.log(arrMap.map((x) => x * 2));
 </pre>
 
-    <h3>Exercici 2: Operador Rest en Funcions</h3>
-    <p> Crea una funció 'suma' que utilitzi l'operador rest per a acceptar un nombre indeterminat d'arguments<br>
-        i retornar la seva suma.
+    <h3>Exercici 2: Filter</h3>
+    <p> Teniu una array de números [1, 2, 3, 4].<br>
+        Crea una nova array que només contingui els números parells.<br>
 <pre class="caja" id="solucion2" style="display: none;">
-const sum = (...numbers) => {
-    let result = 0;
-    numbers.forEach(num => result += num);
-    return result;
-} 
+const arrFilt = [1, 2, 3, 4];
+console.log(arrFilt.filter((x) => x % 2 === 0));
+</pre>
 
-result = sum(1, 2, 3, 4, 1,5);
-console.log(result);
+    <h3>Exercici 3: Find</h3>
+    <p> Teniu una array de números [1, 10 , 8, 11].<br>
+        Utilitza la funció find per a trobar el primer número que és major a 10.<br>
+<pre class="caja" id="solucion2" style="display: none;">
+const arrFind = [1, 10, 8 ,11];
+console.log(arrFind.find((x) => x > 10));
+</pre>
+
+    <h3>Exercici 4: Reduce</h3>
+    <p> Teniu una array de números [13, 7, 8, 21].<br>
+        Fes servir la funció reduce per a calcular la suma total dels números.<br>
+<pre class="caja" id="solucion2" style="display: none;">
+const arrRedu = [13, 7, 8, 21];
+console.log(arrRedu.reduce((acc, curr) => acc + curr));
 </pre>
 
     <script src="domcontrol.js"></script>

@@ -1,21 +1,24 @@
 // Exercici 1
-const array1 = ["Sandía", "Manzana", "Banana"];
-const array2 = ["Lechuga", "Pimiento", "Cebolla"];
 
-const arrayCombined = [...array1, ...array2];
-console.log(arrayCombined);
+const arrMap = [1, 2, 3, 4];
+console.log(arrMap.map((x) => x * 2));
 
 console.log("-------");
-
 // Exercici 2
 
-const sum = (...numbers) =>
-{
-    let result = 0;
-    numbers.forEach(num => result += num);
-    return result;
-} 
+const arrFilt = [1, 2, 3, 4];
+console.log(arrFilt.filter((x) => x % 2 === 0));
 
-result = sum(1, 2, 3, 4, 1,5);
-console.log(result);
+console.log("-------");
+// Exercici 3
+
+const arrFind = [1, 10, 8 ,11];
+console.log(arrFind.find((x) => x > 10));
+
+console.log("-------");
+// Exercici 4
+
+const arrRedu = [13, 7, 8, 21];
+console.log(arrRedu.reduce((acc, curr) => acc + curr));
+
 

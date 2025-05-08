@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rest & Spread operators (3)</title>
+    <title>Array transformations (3)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,42 +23,21 @@
     </style>
 </head>
 <body>
-    <h1>Rest & Spread operators (3)</h1>
+    <h1>Array transformations (3)</h1>
     <p>Abre la consola del navegador para probar los siguientes ejercicios:</p>
     <button id="soluciones">Ver/Ocultar soluciones</button>
 
-    <h3>Exercici 5: Spread en Funcions</h3>
-    <p> Crea una funció que accepti tres arguments. Després, crea una array amb tres elements i crida la funció<br>
-        utilitzant l'operador spread amb aquesta array.
+    <h3>Exercici 6: Every / Some</h3>
+    <p> Usa every i some per a determinar si tots o alguns dels elements de l'array [11, 12, 13, 14]<br>
+        són majors que 10, respectivament<br>
 <pre class="caja" id="solucion1" style="display: none;">
-function sum(x, y, z) {
-    return x + y + z;
-}
+const arr = [11, 12, 13, 14];
 
-const arr = [2, 3, 10];
+const moreThanTen = (x) => x > 10;
 
-console.log(sum(...arr));
+console.log("Every: " + arr.every(moreThanTen));
+console.log("Some: " + arr.some(moreThanTen));
 </pre>
-
-    <h3>Exercici 6: Fusionant Objectes amb Spread</h3>
-    <p> Crea dos objectes amb propietats diferents.<br>
-        Utilitza l'operador spread per a fusionar aquests dos objectes en un de nou.
-<pre class="caja" id="solucion1" style="display: none;">
-const obj1 = {
-    especie: "Gato",
-    nombre: "Canelo",
-};
-
-const obj2 = {
-    raza: "Europeo común",
-    color: "Rubio Atigrado",
-    edad: 18,
-};
-
-const objCombined = { ...obj1, ...obj2 }
-
-console.log(objCombined);
-</pre>  
 
     <script src="domcontrol.js"></script>
     <script src="lvl3.js"></script>
