@@ -1,27 +1,6 @@
-// Exercici 3
+// Exercici 5
 
-const objecte1 = {
-    nombre: "Francisco",
-    edad: 27,
-};
+const arr = [1, 3, 7, 10 ,15, 17, 11, 5, 8, 12, 9];
 
-const objecte2 = { ...objecte1 };
-
-objecte2.nombre = "Juan";
-objecte2.edad = 45;
-
-console.log(objecte1);
-console.log(objecte2);
-
-console.log("-------");
-
-// Exercici 4
-
-const arr = ["Hamilton", "Verstappen", "Norris", "Russell", "Alonso"];
-let first, second, rest;
-
-[first, second, ...rest] = arr;
-
-console.log(first);
-console.log(second);
-console.log(rest);
+const final = arr.filter((x) => x >= 10).map(x => x * 2).reduce((sum, x) => sum + x);
+console.log(final);
