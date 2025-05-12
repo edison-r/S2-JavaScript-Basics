@@ -1,24 +1,44 @@
 // Exercici 1
+const promesa = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Hola, món");
+  }, 2000);
+});
 
-const arrMap = [1, 2, 3, 4];
-console.log(arrMap.map((x) => x * 2));
-
-console.log("-------");
 // Exercici 2
+promesa.then((salutacio) => {
+    console.log(salutacio);
+});
 
-const arrFilt = [1, 2, 3, 4];
-console.log(arrFilt.filter((x) => x % 2 === 0));
-
-console.log("-------");
 // Exercici 3
+const promesa2 = (input) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (input === "Hola") {
+                resolve("Hola!!");
+            } else {
+                reject("Salutacio incorrecta");
+            }
+        }, 2000);
+    });
+}
 
-const arrFind = [1, 10, 8 ,11];
-console.log(arrFind.find((x) => x > 10));
-
-console.log("-------");
+/* let resultat = "Hola";
+promesa2(resultat)
+    .then((missatge) => {
+        console.log(missatge);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+*/
 // Exercici 4
-
-const arrRedu = [13, 7, 8, 21];
-console.log(arrRedu.reduce((acc, curr) => acc + curr));
-
-
+async function asyncTest() {
+    try {
+        const missatge = await promesa;
+        console.log(missatge);
+    } catch (error) {
+        console.log(error);
+    }
+}
+asyncTest();

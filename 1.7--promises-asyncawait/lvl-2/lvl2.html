@@ -31,7 +31,15 @@
     <p> Modifica la funció de l'exercici 4 per a que capturi qualsevol possible error utilitzant un bloc try/catch. </p>
 
 <pre class="caja" id="solucion1" style="display: none;">
-a
+async function asyncTest() {
+    try {
+        const missatge = await promesa;
+        console.log(missatge);
+    } catch (error) {
+        console.log(error);
+    }
+}
+asyncTest();
 </pre>
 
     <script src="domcontrol.js"></script>
