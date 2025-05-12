@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises & Async/Await (3)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 1200px;
+        }
+        h1, h3 {
+            color: #333;
+        }
+        .caja {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            max-width: 700px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Promises & Async/Await (3)</h1>
+    <p>Abre la consola del navegador para probar los siguientes ejercicios:</p>
+    <button id="soluciones">Ver/Ocultar soluciones</button>
+
+    <h3>Exercici 6: Promise.all</h3>
+    <p> Crea dues promeses que es resolguin després de 2 i 3 segons, respectivament.<br>
+        Utilitza Promise.all per a esperar que ambdues promeses es resolguin, i imprimeix els resultats a la consola.</p>  
+<pre class="caja" id="solucion1" style="display: none;">
+const promesa1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        const resultat = true;
+        if (resultat) {
+            resolve("1ra Promesa 2sec");
+        } else {
+            reject("Error en la 1ra promesa");
+        }
+    }, 2000);
+});
+
+const promesa2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        const resultat = true;
+        if (resultat) {
+            resolve("2da Promesa 3sec");
+        } else {
+            reject("Error en la 2da promesa");
+        }
+    }, 3000);
+});
+
+async function asyncTest() {
+    try {
+        const allPromises = await Promise.all([promesa1, promesa2]);
+        console.log(allPromises);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+asyncTest();
+</pre>
+
+    <script src="domcontrol.js"></script>
+    <script src="lvl3.js"></script>
+</body>
+</html>

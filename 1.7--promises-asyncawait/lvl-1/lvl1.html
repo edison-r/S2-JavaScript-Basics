@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises & Async/Await (1)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 1200px;
+        }
+        h1, h3 {
+            color: #333;
+        }
+        .caja {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            max-width: 700px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Promises & Async/Await (1)</h1>
+    <p>Abre la consola del navegador para probar los siguientes ejercicios:</p>
+    <button id="soluciones">Ver/Ocultar soluciones</button>
+
+    <h3>Exercici 1: Creació d'una Promesa</h3>
+    <p> Crea una promesa que es resolgui després de 2 segons i que retorni la cadena de text 'Hola, món'. </p>
+
+<pre class="caja" id="solucion1" style="display: none;">
+const promesa = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Hola, món");
+  }, 2000);
+});
+</pre>
+
+    <h3>Exercici 2: Utilització d'una Promesa</h3>
+    <p> Utilitza la promesa creada en l'exercici anterior. Crea un .then que imprimeixi el resultat a la consola.</p>
+
+<pre class="caja" id="solucion2" style="display: none;">
+promesa.then((salutacio) => {
+    console.log(salutacio);
+});
+</pre>
+
+    <h3>Exercici 3: Promesa amb reject</h3>
+    <p> Crea una promesa que es resolgui després de 2 segons si l'input és igual a 'Hola',<br>
+        i que la rebutgi si l'input és qualsevol altra cosa.</p>
+
+<pre class="caja" id="solucion2" style="display: none;">
+const promesa2 = (input) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (input === "Hola") {
+                resolve("Hola!!");
+            } else {
+                reject("Salutacio incorrecta");
+            }
+        }, 2000);
+    });
+}
+</pre>
+
+    <h3>Exercici 4: Ús de async/await</h3>
+    <p> Escriu una funció asíncrona que utilitzi la funció await per a esperar el resultat<br>
+        de la promesa creada a l'exercici 1, i que després imprimeixi aquest resultat a la consola.</p>
+
+
+<pre class="caja" id="solucion2" style="display: none;">
+async function asyncTest() {
+    try {
+        const missatge = await promesa;
+        console.log(missatge);
+    } catch (error) {
+        console.log(error);
+    }
+}
+asyncTest();
+</pre>
+
+    <script src="domcontrol.js"></script>
+    <script src="lvl1.js"></script>
+</body>
+</html>
