@@ -9,7 +9,7 @@ El proyecto consta de siete partes, cada una utilizando practicando diferentes c
 1. **Arrow functions** 
 2. **Ternary operators**
 3. **Callbacks**
-4. **Rest & Spread operators** _🚧 en proceso_
+4. **Rest & Spread operators**
 5. **Array transformations**
 6. **Array loops**
 7. **Promises & Async/Await**
