@@ -1,4 +1,4 @@
-# SPRINT 2 💫 - JavaScript Basics
+# ⚙️ SPRINT 2 - JavaScript Basics
 
 Este proyecto contiene ejercicios de JavaScript de diferentes niveles.
 
